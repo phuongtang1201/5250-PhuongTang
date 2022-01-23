@@ -37,13 +37,26 @@ namespace Mine.Views
         }
 
         /// <summary>
-        /// Open the delere page for this item
+        /// Open the delete page for this item
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         public async void DeleteItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new ItemDeletePage(viewModel)));
+
+            //Skip return to read page if lauching the delete page
+            await Navigation.PopAsync();
+        }
+
+        /// <summary>
+        /// Open the update page for this item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void UpdateItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ItemUpdatePage(viewModel)));
 
             //Skip return to read page if lauching the delete page
             await Navigation.PopAsync();
