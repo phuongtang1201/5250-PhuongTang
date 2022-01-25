@@ -139,7 +139,4 @@
   <ItemGroup>
     <BundleResource Include="Resources\icon_cancel.png" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\icon_delete.png" />
-  </ItemGroup>
 </Project>
