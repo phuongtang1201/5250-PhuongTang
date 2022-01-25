@@ -108,6 +108,7 @@
     <Content Include="Assets\icon_cancel.png" />
     <Content Include="Assets\icon_delete.png" />
     <Content Include="Assets\icon_save.png" />
+    <Content Include="Assets\icon_update.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
