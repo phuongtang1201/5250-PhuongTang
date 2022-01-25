@@ -136,7 +136,4 @@
   <ItemGroup>
     <BundleResource Include="Resources\icon_add.png" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\icon_cancel.png" />
-  </ItemGroup>
 </Project>
