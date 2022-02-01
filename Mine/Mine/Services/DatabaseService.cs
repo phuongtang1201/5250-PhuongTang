@@ -35,9 +35,24 @@ namespace Mine.Services
             }
         }
 
-        public Task<bool> CreateAsync(ItemModel item)
+        /// <summary>
+        /// InsertAsync will write to the table, it returns the ID of what was written, 
+        /// for our usage item already holds the ID, so as long as it is not 0, it worked
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public async Task<bool> CreateAsync(ItemModel item)
         {
-            throw new NotImplementedException();
+            if (item == null)
+            {
+                return false;
+            }
+            var result = await Database.InsertAsync(item);
+            if (result == 0)
+            {
+                return false;
+            }
+            return true;
         }
 
         public Task<bool> UpdateAsync(ItemModel item)
@@ -55,6 +70,11 @@ namespace Mine.Services
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Call to the ToListAsync method on Database with the Table called ItemModel
+        /// </summary>
+        /// <param name="forceRefresh"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
         {
             var result = await Database.Table<ItemModel>().ToListAsync();
