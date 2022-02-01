@@ -69,6 +69,11 @@ namespace Mine.Services
             return true;
         }
 
+        /// <summary>
+        /// Delete data in database by using their id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<bool> DeleteAsync(string id)
         {
             var data = await ReadAsync(id);
