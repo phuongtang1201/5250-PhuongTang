@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Mine.Models;
 
 namespace UnitTests.Models
 {
@@ -11,11 +12,12 @@ namespace UnitTests.Models
             //Arange
 
             //Act
+            var result = new ItemModelTests();
 
             //Reset
 
             //Assert
-            Assert.Pass();
+            Assert.IsNotNull(result);
         }
     }
 }
