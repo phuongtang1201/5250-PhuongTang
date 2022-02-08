@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NUnit.Framework;
+using Mine.Models;
 
 namespace UnitTests.Models
 {
-    class HomeMenuItemTests
+    [TestFixture]
+    public class HomeMenuItemTests
     {
+        [Test]
+        public void HomeMenuItem_Constructor_Valid()
+        {
+            //Arange
+
+            //Act
+            var result = new HomeMenuItem();
+
+            //Reset
+
+            //Assert
+            Assert.IsNotNull(result);
+        }
+  
     }
 }
