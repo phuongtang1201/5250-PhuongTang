@@ -55,6 +55,19 @@ namespace UnitTests.Helpers
             Assert.IsFalse(result < 1);
             Assert.IsFalse(result > 6);
         }
+        [Test]
+        public void RollDice_InValid_NegRolls_6sided_Should_Fail()
+        {
+            // Arrange
+
+            // Act
+            var result = DiceHelper.RollDice(-1, 6);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+        }
 
         [Test]
         public void RollDice_Invalid_Roll_Force_Should_Return_1()
