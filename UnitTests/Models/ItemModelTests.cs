@@ -12,12 +12,34 @@ namespace UnitTests.Models
             //Arange
 
             //Act
-            var result = new ItemModelTests();
+            var result = new ItemModel();
 
             //Reset
 
             //Assert
             Assert.IsNotNull(result);
+        }
+
+        [Test]
+        public void ItemModel_Set_Get_Valid_Default_Should_Pass()
+        {
+            //Arange
+
+            //Act
+            var result = new ItemModel();
+            result.Description = "Description";
+            result.Id = "ID";
+            result.Text = "Text";
+            result.Value = 1;
+
+            //Reset
+
+            //Assert
+            Assert.AreEqual("Description", result.Description);
+            Assert.AreEqual("ID", result.Id);
+            Assert.AreEqual("Text", result.Text);
+            Assert.AreEqual(1, result.Value);
+
         }
     }
 }
