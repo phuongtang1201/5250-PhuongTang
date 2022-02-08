@@ -42,6 +42,21 @@ namespace UnitTests.Helpers
         }
 
         [Test]
+        public void RollDice_Valid_Roll_1_Dice_6_Should_Not_Less_1_Greater_6()
+        {
+            //Arrange
+
+            //Act
+            var result = DiceHelper.RollDice(1, 6);
+
+            //Reset
+
+            //Assert
+            Assert.IsFalse(result < 1);
+            Assert.IsFalse(result > 6);
+        }
+
+        [Test]
         public void RollDice_Invalid_Roll_Force_Should_Return_1()
         {
             //Arrange
